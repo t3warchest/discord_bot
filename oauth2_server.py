@@ -77,4 +77,4 @@ def callback():
         return redirect(authorisation_url) 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=os.getenv("PORT", default=5000))
+    app.run(debug=True, port=5000)
