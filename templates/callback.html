@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MySQL Database</title>
+    <style>
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        #back-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>MySQL Database</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Access Token</th>
+                <th>Expiration</th>
+                <th>Refresh Token</th>
+                <th>Server Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for row in rows%}
+                <tr>
+                    <td>{{row[0]}}</td>
+                    <td>{{row[1]}}</td>
+                    <td>{{row[2]}}</td>
+                    <td>{{row[3]}}</td>
+                    <td>{{row[4]}}</td>
+                </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+    <a id="back-button" href="https://discord.com/channels/{{server_name|urlencode}}">Go Back to Discord Server</a>
+</body>
+</html>
