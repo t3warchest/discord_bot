@@ -21,7 +21,7 @@ db_connection = mysql.connector.connect(
     host="localhost",
     user="root",
     password=os.getenv('db_pass'),
-    database="discord_db"
+    database="discord_db",
     url = 'mysql -hlocalhost -uroot -pThisisMySQL@1 --port 3306 --protocol=TCP discord_db'
 )
 cursor = db_connection.cursor()
