@@ -18,14 +18,13 @@ token_url = 'https://discord.com/api/oauth2/token'
 authorisation_url = f"https://discord.com/api/oauth2/authorize?client_id=1184429640606023740&redirect_uri={parse.quote(redirect_uri)}&response_type=code&permissions=8&scope=bot"
 
 db_connection = mysql.connector.connect(
-    host="localhost",
+    host="roundhouse.proxy.rlwy.net",
     user="root",
-    password=os.getenv('db_pass'),
-    database="discord_db",
-    url = 'mysql -hlocalhost -uroot -pThisisMySQL@1 --port 3306 --protocol=TCP discord_db'
+    password="e2fD2ega3dF6CABA1e3EeFeDG1cDAhC2",
+    database="railway",
+    port = 47428
 )
 cursor = db_connection.cursor()
-cursor.execute("USE discord_db")
 
 @app.route('/')
 def index():
